@@ -1,0 +1,55 @@
+
+=== AGGREGATE RESULTS ===
+    ACCURACY: 0.7530 ± 0.0075 (95% CI: ±0.0066)
+     ROC_AUC: 0.8217 ± 0.0134 (95% CI: ±0.0117)
+   PRECISION: 0.7364 ± 0.0152 (95% CI: ±0.0133)
+      RECALL: 0.7896 ± 0.0294 (95% CI: ±0.0258)
+ SPECIFICITY: 0.7170 ± 0.0238 (95% CI: ±0.0208)
+          F1: 0.7615 ± 0.0079 (95% CI: ±0.0069)
+
+AVERAGE CONFUSION MATRIX:
+Predicted:    0    1
+Actual 0:  143   56
+Actual 1:   42  157
+
+Top 10 most important features:
+  1. Feature 7449: 9.0000
+  2. Feature 2668: 7.0000
+  3. Feature 18930: 6.0000
+  4. Feature 3280: 6.0000
+  5. Feature 9990: 5.0000
+  6. Feature 4842: 5.0000
+  7. Feature 11700: 5.0000
+  8. Feature 14238: 5.0000
+  9. Feature 7806: 5.0000
+  10. Feature 14099: 5.0000
+
+============================================================
+           AUGMENTED TRAINING RESULTS
+============================================================
+Training Strategy: Augmented data for training, original only for testing
+Training set: 9600 samples (1600 unique IDs)
+Test set: 400 samples (400 unique IDs)
+No data leakage: ✅ (train and test IDs are completely separate)
+
+PERFORMANCE METRICS:
+      ACCURACY: 0.7675
+       ROC AUC: 0.8431
+     PRECISION: 0.7196
+        RECALL: 0.8235
+   SPECIFICITY: 0.7183
+      F1-SCORE: 0.7681
+
+TRAINING DATA DISTRIBUTION:
+  original: 1600 samples
+  rot45: 1600 samples
+  rot-45: 1600 samples
+  bright: 1600 samples
+  dark: 1600 samples
+  contrast: 1600 samples
+
+MODEL BENEFITS:
+  ✅ Realistic evaluation (no test data leakage)
+  ✅ Robust training (9600 augmented samples)
+  ✅ Unbiased testing (original images only)
+============================================================
