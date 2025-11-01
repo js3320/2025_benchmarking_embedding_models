@@ -15,8 +15,8 @@ The purpose of this project is to explore how well foundation-model-derived imag
 
 | Model | Dataset | Task | Embedding Dim | Data Availability |
 |--------|----------|------|----------------|-------------------|
-| **MedImageInsight** | MIMIC-CXR | Atelectasis (present vs absent) | 512-D | Available upon request |
-| **CXR Foundation** | MIMIC-CXR | Atelectasis (present vs absent) | 2048-D | Not hosted due to large file size |
+| **MedImageInsight** | MIMIC-CXR | Atelectasis (present vs absent) | 1024 | Embeddings available |
+| **CXR Foundation** | MIMIC-CXR | Atelectasis (present vs absent) | 32 × 768 | Embedidngs not hosted due to large file size |
 
 - All embeddings were generated from de-identified **MIMIC-CXR** images (1,000 positive + 1,000 negative samples).  
 - Each embedding vector corresponds to a single chest X-ray study.  
@@ -29,8 +29,7 @@ The purpose of this project is to explore how well foundation-model-derived imag
 **Raw image data (MIMIC-CXR)** are restricted under PhysioNet credentialed access.  
 They are not included in this repository and cannot be redistributed.
 
-- The **MedImageInsight embedding CSV** (balanced 1,000/1,000) may be shared upon request for research purposes.  
-  Contact the maintainer if you require access.  
+- The **MedImageInsight embedding CSV** available for research purposes. They can be regenerated locally using the provided scripts if you have access to the same dataset.  
 - The **CXR Foundation embeddings** are large (several GBs) and are not stored here.  
   They can be regenerated locally using the provided scripts if you have access to the same dataset.
 
