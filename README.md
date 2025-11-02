@@ -39,8 +39,6 @@ They are not included in this repository and cannot be redistributed.
 
 ```
 .
-
-
 ├── MedImageInsight/
 │   ├── 01_generate_embeddings_aug.py # embedding generation using MedImageInsight
 │   ├── 02_train_eval_atelectasis.py # training and evaluation on embeddings
