@@ -16,7 +16,7 @@ The purpose of this project is to explore how well foundation-model-derived imag
 | Model | Dataset | Task | Embedding Dim | Data Availability |
 |--------|----------|------|----------------|-------------------|
 | **MedImageInsight** | MIMIC-CXR | Atelectasis (present vs absent) | 1024 | Embeddings available |
-| **CXR Foundation** | MIMIC-CXR | Atelectasis (present vs absent) | 32 × 768 | Embedidngs not hosted due to large file size |
+| **CXR Foundation** | MIMIC-CXR | Atelectasis (present vs absent) | 32 × 768 | Embeddings not hosted due to large file size |
 
 - All embeddings were generated from de-identified **MIMIC-CXR** images (1,000 positive + 1,000 negative samples).  
 - Each embedding vector corresponds to a single chest X-ray study.  
@@ -29,7 +29,7 @@ The purpose of this project is to explore how well foundation-model-derived imag
 **Raw image data (MIMIC-CXR)** are restricted under PhysioNet credentialed access.  
 They are not included in this repository and cannot be redistributed.
 
-- The **MedImageInsight embedding CSV** available for research purposes. They can be regenerated locally using the provided scripts if you have access to the same dataset.  
+- The **MedImageInsight embedding CSV** is available for research purposes and can be shared upon request.  
 - The **CXR Foundation embeddings** are large (several GBs) and are not stored here.  
   They can be regenerated locally using the provided scripts if you have access to the same dataset.
 
@@ -107,13 +107,42 @@ python 03_cluster_umap.py     --data data/embeddings_mimic_mii_atelectasis_balan
 
 ---
 
-## Environment Setup
+## Installation
 
+To install dependencies:
 ```bash
-conda create -n cxr-benchmark python=3.10 -y
-conda activate cxr-benchmark
-pip install numpy pandas scikit-learn matplotlib umap-learn tqdm
+pip install -r requirements.txt
 ```
+
+If you are using Conda:
+```bash
+conda env create -f environment.yml
+conda activate cxr-benchmark
+```
+
+---
+
+## Foundation Model Access
+
+To reproduce embedding generation or run foundation models locally, please download them from Hugging Face:
+
+### 1. MedImageInsight
+Visit: [https://huggingface.co/lion-ai/MedImageInsights](https://huggingface.co/lion-ai/MedImageInsights)  
+Example usage:
+```python
+from transformers import AutoModel
+model = AutoModel.from_pretrained("lion-ai/MedImageInsights")
+```
+
+### 2. CXR Foundation
+Visit: [https://huggingface.co/google/cxr-foundation](https://huggingface.co/google/cxr-foundation)  
+Example usage:
+```python
+from transformers import AutoModel
+model = AutoModel.from_pretrained("google/cxr-foundation")
+```
+
+Both models may require authentication through your Hugging Face account before downloading.
 
 ---
 
@@ -122,7 +151,7 @@ pip install numpy pandas scikit-learn matplotlib umap-learn tqdm
 - This repository provides scripts and example embeddings for research and reproducibility only.  
 - No patient identifiers, PHI, or pixel-level data are stored or shared.  
 - For other disease labels (edema, effusion, opacity, etc.), the same pipeline can be reused with corresponding embeddings.
-
+- You can see results for other labels and the detailed method from the submitted abstract: https://openreview.net/forum?id=8ow17ZX96u
 ---
 
 ## Contact
@@ -130,7 +159,6 @@ pip install numpy pandas scikit-learn matplotlib umap-learn tqdm
 **Maintainer:** Jiho Shin  
 Biomedical Engineering, Imperial College London  
 Email: jiho.shin20@imperial.ac.uk  
-GitHub: [js3320](https://github.com/js3320)
 
 ---
 
