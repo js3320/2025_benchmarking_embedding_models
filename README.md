@@ -127,19 +127,11 @@ To reproduce embedding generation or run foundation models locally, please downl
 
 ### 1. MedImageInsight
 Visit: [https://huggingface.co/lion-ai/MedImageInsights](https://huggingface.co/lion-ai/MedImageInsights)  
-Example usage:
-```python
-from transformers import AutoModel
-model = AutoModel.from_pretrained("lion-ai/MedImageInsights")
-```
+
 
 ### 2. CXR Foundation
 Visit: [https://huggingface.co/google/cxr-foundation](https://huggingface.co/google/cxr-foundation)  
-Example usage:
-```python
-from transformers import AutoModel
-model = AutoModel.from_pretrained("google/cxr-foundation")
-```
+
 
 Both models may require authentication through your Hugging Face account before downloading.
 
