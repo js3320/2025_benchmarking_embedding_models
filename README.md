@@ -39,17 +39,17 @@ They are not included in this repository and cannot be redistributed.
 
 ```
 .
+
+
 ├── MedImageInsight/
-│   ├── 01_generate_embeddings_mimic.py      # reference script for embedding generation
-│   ├── 02_train_eval_atelectasis.py         # training and evaluation on available embeddings
-│   ├── 03_cluster_umap.py                   # clustering and visualization of embeddings
-│   ├── data/                                # small sample embedding CSV (if included)
+│   ├── 01_generate_embeddings_aug.py # embedding generation using MedImageInsight
+│   ├── 02_train_eval_atelectasis.py # training and evaluation on embeddings
+│   ├── 03_umap_clustering.py # clustering and visualization using UMAP
 │   └── results/
 │       ├── kfold_augmented_results.png
-│       ├── figures/
-│       │   ├── patient_clusters_2D.png
-│       │   └── patient_labels_2colors.png
-│       └── patient_clusters.csv
+│       ├── patient_clusters.csv
+│       ├── patient_clusters_2D.png
+│       └── patient_labels_2colors.png
 │
 ├── CXR_foundation/
 │   ├── 01_generate_embeddings_mimic.py      # reference script for embedding generation
@@ -58,8 +58,9 @@ They are not included in this repository and cannot be redistributed.
 │       ├── kfold_augmented_results.png
 │       └── kfold_augmented_results.txt
 │
-└── tools/
-    └── inspect_embeddings.py                # utility to check embedding dimensionality
+├── environment_cxr_benchmark.yml # conda environment file
+├── requirements.txt # pip dependency list
+└── README.md
 ```
 
 ---
@@ -71,11 +72,11 @@ You can:
 1. Load and train models using the **MedImageInsight embeddings**  
    (`MedImageInsight/02_train_eval_atelectasis.py`)
 2. Visualize and cluster embedding spaces using UMAP or t-SNE  
-   (`MedImageInsight/03_cluster_umap.py`)
-3. Inspect embeddings to verify their dimensionality  
-   ```bash
-   python tools/inspect_embeddings.py MedImageInsight/data/embeddings_mimic_mii_atelectasis_balanced.csv
-   ```
+   (`MedImageInsight/03_umap_clustering.py`)
+3. Recreate embeddings using **MedImageInsight** if you have MIMIC-CXR access  
+   (`MedImageInsight/01_generate_embeddings_aug.py`)
+
+
 
 You cannot:
 
