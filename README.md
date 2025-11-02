@@ -141,8 +141,8 @@ Both models may require authentication through your Hugging Face account before 
 
 - This repository provides scripts and example embeddings for research and reproducibility only.  
 - No patient identifiers, PHI, or pixel-level data are stored or shared.  
-- For other disease labels (edema, effusion, opacity, etc.), the same pipeline can be reused with corresponding embeddings.
-- You can see results for other labels and the detailed method from the submitted abstract: https://openreview.net/forum?id=8ow17ZX96u
+- For other disease labels (edema, effusion, and opacity), the same pipeline can be reused with corresponding embeddings.
+- You can see full results for labels (atelectasis, edema, effusion, and opacity) and dataset (MIMIC and NIH14) with detailed methods from the submitted abstract: https://openreview.net/forum?id=8ow17ZX96u
 ---
 
 ## Contact
