@@ -2,7 +2,7 @@
 ### MedImageInsight vs CXR Foundation (2025 Foundation Model Comparison)
 
 This repository presents benchmarking experiments for **Atelectasis detection** using the **MIMIC-CXR** dataset.  
-See results_presentation.pdf file for full results on disease labels (Atelectasis, edema, effusion and opacity) using MIMIC and NIH cxr dataset using Medimageinsight and CXR foundation model for labelling and clustering tasks.
+See **results_presentation.pdf** file for full results on disease labels (Atelectasis, edema, effusion and opacity) using MIMIC and NIH cxr dataset using Medimageinsight and CXR foundation model for labelling and clustering tasks.
 Two foundation models were evaluated:
 
 - **MedImageInsight** — a lightweight, clinically aligned foundation model (embeddings available for use)  
