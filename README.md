@@ -2,6 +2,7 @@
 ### MedImageInsight vs CXR Foundation (2025 Foundation Model Comparison)
 
 This repository presents benchmarking experiments for **Atelectasis detection** using the **MIMIC-CXR** dataset.  
+See results_presentation.pdf file for full results on disease labels (Atelectasis, edema, effusion and opacity) using MIMIC and NIH cxr dataset using Medimageinsight and CXR foundation model for labelling and clustering tasks.
 Two foundation models were evaluated:
 
 - **MedImageInsight** — a lightweight, clinically aligned foundation model (embeddings available for use)  
@@ -58,6 +59,7 @@ They are not included in this repository and cannot be redistributed.
 │
 ├── environment_cxr_benchmark.yml # conda environment file
 ├── requirements.txt # pip dependency list
+├── results_presentation.pdf # find entire results here
 └── README.md
 ```
 
@@ -142,7 +144,7 @@ Both models may require authentication through your Hugging Face account before 
 - This repository provides scripts and example embeddings for research and reproducibility only.  
 - No patient identifiers, PHI, or pixel-level data are stored or shared.  
 - For other disease labels (edema, effusion, and opacity), the same pipeline can be reused with corresponding embeddings.
-- You can see full results for labels (atelectasis, edema, effusion, and opacity) and dataset (MIMIC and NIH14) with detailed methods from the submitted abstract: https://openreview.net/forum?id=8ow17ZX96u
+- You can see more results for labels (atelectasis, edema, effusion, and opacity) and dataset (MIMIC and NIH14) with detailed methods from the submitted abstract (not accepted): https://openreview.net/forum?id=8ow17ZX96u
 ---
 
 ## Contact
