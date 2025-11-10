@@ -11,6 +11,14 @@ Two foundation models were evaluated:
 The purpose of this project is to explore how well foundation-model-derived image embeddings can classify Atelectasis and visualize disease-related latent spaces in de-identified ICU chest X-rays.
 
 ---
+## Notes
+
+- This repository provides scripts and example embeddings for research and reproducibility only.  
+- No patient identifiers, PHI, or pixel-level data are stored or shared.  
+- For other disease labels (edema, effusion, and opacity), the same pipeline can be reused with corresponding embeddings.
+- You can see more results for labels (atelectasis, edema, effusion, and opacity) and dataset (MIMIC and NIH14) with detailed methods from the abstract submitted to MedEurIPS 2025 workshop: https://js3320.github.io/files/neurlps_abtract_JihoShin.pdf
+
+---
 
 ## Overview
 
@@ -139,13 +147,7 @@ Both models may require authentication through your Hugging Face account before 
 
 ---
 
-## Notes
 
-- This repository provides scripts and example embeddings for research and reproducibility only.  
-- No patient identifiers, PHI, or pixel-level data are stored or shared.  
-- For other disease labels (edema, effusion, and opacity), the same pipeline can be reused with corresponding embeddings.
-- You can see more results for labels (atelectasis, edema, effusion, and opacity) and dataset (MIMIC and NIH14) with detailed methods from the submitted abstract (not accepted): https://openreview.net/forum?id=8ow17ZX96u
----
 
 ## Contact
 
