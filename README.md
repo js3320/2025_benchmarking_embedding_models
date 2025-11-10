@@ -19,6 +19,21 @@ The purpose of this project is to explore how well foundation-model-derived imag
 - You can see more results for labels (atelectasis, edema, effusion, and opacity) and dataset (MIMIC and NIH14) with detailed methods from the abstract submitted to MedEurIPS 2025 workshop: https://js3320.github.io/files/neurlps_abtract_JihoShin.pdf
 
 ---
+## Foundation Model Access
+
+To reproduce embedding generation or run foundation models locally, please download them from Hugging Face:
+
+### 1. MedImageInsight
+Visit: [https://huggingface.co/lion-ai/MedImageInsights](https://huggingface.co/lion-ai/MedImageInsights)  
+
+
+### 2. CXR Foundation
+Visit: [https://huggingface.co/google/cxr-foundation](https://huggingface.co/google/cxr-foundation)  
+
+
+Both models may require authentication through your Hugging Face account before downloading.
+
+---
 
 ## Overview
 
@@ -131,21 +146,7 @@ conda activate cxr-benchmark
 
 ---
 
-## Foundation Model Access
 
-To reproduce embedding generation or run foundation models locally, please download them from Hugging Face:
-
-### 1. MedImageInsight
-Visit: [https://huggingface.co/lion-ai/MedImageInsights](https://huggingface.co/lion-ai/MedImageInsights)  
-
-
-### 2. CXR Foundation
-Visit: [https://huggingface.co/google/cxr-foundation](https://huggingface.co/google/cxr-foundation)  
-
-
-Both models may require authentication through your Hugging Face account before downloading.
-
----
 
 
 
